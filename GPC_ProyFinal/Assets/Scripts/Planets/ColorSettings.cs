@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class ColorSettings
+[CreateAssetMenu()]
+public class ColorSettings : ScriptableObject
 {
-    
+    public Color planetColor;
 }
