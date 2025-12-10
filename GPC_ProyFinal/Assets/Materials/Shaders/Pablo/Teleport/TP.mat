@@ -39,7 +39,13 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _BlueDelay: 0.5
     - _BorderWidth: 0.08
+    - _GrowTime1: 1
+    - _GrowTime2: 1.5
+    - _GrowTime3: 2
+    - _GrowTime4: 2.5
+    - _GrowTimeMax: 1
     - _LineWidth: 0.02
     - _NoiseScale: 6
     - _NoiseSpeed: 1
@@ -58,7 +64,9 @@ Material:
     - _SquareSize4: 0.666
     m_Colors:
     - _BGColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BlueColor: {r: 0, g: 0.5, b: 1, a: 1}
     - _BorderColor: {r: 0.19999996, g: 1, b: 2, a: 1}
+    - _FinalColor: {r: 0, g: 0.5, b: 1, a: 1}
     - _InnerColor: {r: 0, g: 0.8, b: 1, a: 1}
     - _LineColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
