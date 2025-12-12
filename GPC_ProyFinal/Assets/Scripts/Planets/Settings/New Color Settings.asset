@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: New Color Settings
   m_EditorClassIdentifier: Assembly-CSharp::ColorSettings
   planetColor: {r: 0.26709995, g: 0.59607846, b: 0.16470586, a: 0}
+  planetMaterial: {fileID: 2100000, guid: fab5ba8039b27174685d6e4cca310661, type: 2}
