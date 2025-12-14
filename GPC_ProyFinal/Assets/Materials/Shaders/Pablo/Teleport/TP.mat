@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlueDelay: 0.5
-    - _BlueEmissiveBoost: 14.19
+    - _BlueEmissiveBoost: 27.43
     - _BorderWidth: 0.08
     - _EmissiveIntensity: 10.51
     - _GrowTime1: 1
@@ -49,7 +49,7 @@ Material:
     - _GrowTime4: 2.5
     - _GrowTimeMax: 1
     - _LightStrength: 3.94
-    - _LineWidth: 0.02
+    - _LineWidth: 0.012
     - _NoiseScale: 6
     - _NoiseSpeed: 1
     - _Radius: 0.4
