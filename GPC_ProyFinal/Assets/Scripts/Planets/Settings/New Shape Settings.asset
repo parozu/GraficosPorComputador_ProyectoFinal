@@ -18,35 +18,35 @@ MonoBehaviour:
     useFirstLayerAsMask: 0
     noiseSettings:
       filterType: 0
-      strength: 1
-      numLayers: 5
-      baseRoughness: 2.8
-      roughness: 2.86
-      persistence: 56.08
-      centre: {x: 0, y: 0, z: 0}
-      minValue: 0
+      strength: 0.12
+      numLayers: 4
+      baseRoughness: 0.55
+      roughness: 2.34
+      persistence: 0.54
+      centre: {x: 1.86, y: 0, z: 0}
+      minValue: 1.14
       weightMultiplier: 0
-  - enabled: 0
+  - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 0
-      strength: 1
-      numLayers: 1
+      strength: 2.87
+      numLayers: 5
       baseRoughness: 1
-      roughness: 2
+      roughness: 2.34
       persistence: 0.5
-      centre: {x: 0, y: 0, z: 0}
-      minValue: 0
-      weightMultiplier: 0.8
-  - enabled: 0
+      centre: {x: 3.34, y: 0, z: 0}
+      minValue: 0.95
+      weightMultiplier: 0
+  - enabled: 1
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 1
-      strength: 1
-      numLayers: 1
-      baseRoughness: 1
-      roughness: 2
+      strength: 0.98
+      numLayers: 4
+      baseRoughness: 2.6
+      roughness: 2.4
       persistence: 0.5
       centre: {x: 0, y: 0, z: 0}
       minValue: 0
-      weightMultiplier: 0.8
+      weightMultiplier: 1.52
