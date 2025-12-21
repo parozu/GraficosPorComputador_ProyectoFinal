@@ -87,7 +87,6 @@ public class Planet : MonoBehaviour
 
     void GenerateColors()
     {
-<<<<<<< HEAD
         colorGenerator.UpdateColors();
         for (int i = 0; i < 6; i++)
         {
@@ -95,11 +94,6 @@ public class Planet : MonoBehaviour
             {
                 terrainFaces[i].UpdateUVs(colorGenerator);
             }
-=======
-        foreach (MeshFilter m in meshFilters)
-        {
-            m.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
->>>>>>> parent of 64d761c (Gradiente de colores de planeta)
         }
     }
 }
