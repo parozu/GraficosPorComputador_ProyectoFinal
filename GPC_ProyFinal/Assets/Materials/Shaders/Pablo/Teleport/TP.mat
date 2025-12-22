@@ -39,16 +39,17 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _AnimStartTime: 0
     - _BlueDelay: 0.5
-    - _BlueEmissiveBoost: 14.95
+    - _BlueEmissiveBoost: 9.8
     - _BorderWidth: 0.08
-    - _EmissiveIntensity: 10.51
+    - _EmissiveIntensity: 10.07
     - _GrowTime1: 1
-    - _GrowTime2: 1.5
-    - _GrowTime3: 2
-    - _GrowTime4: 2.5
+    - _GrowTime2: 1
+    - _GrowTime3: 1
+    - _GrowTime4: 1
     - _GrowTimeMax: 1
-    - _LightStrength: 3.94
+    - _LightStrength: 0.8
     - _LineWidth: 0.012
     - _NoiseScale: 6
     - _NoiseSpeed: 1

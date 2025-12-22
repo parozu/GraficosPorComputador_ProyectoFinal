@@ -35,6 +35,9 @@ Shader "Custom/TP_Magic"
         //Tiempo que dura el fade hasta color final
         _BlueDelay ("Extra Time Before Blue (s)", Float) = 0.5
 
+        //Control de inicio (para poder reiniciar desde script con MaterialPropertyBlock)
+        [PerRendererData] _AnimStartTime ("Anim Start Time", Float) = 0
+
         //Emision + luz
         _EmissiveIntensity ("Emissive Intensity", Float) = 1.0
         _BlueEmissiveBoost ("Blue Emissive Boost", Float) = 2.0
@@ -84,7 +87,7 @@ Shader "Custom/TP_Magic"
                 float  _Radius4;
 
                 float  _RotationSpeedRight;
-                float _RotationSpeedLeft;
+                float  _RotationSpeedLeft;
 
                 float  _GrowTime1;
                 float  _GrowTime2;
@@ -92,6 +95,8 @@ Shader "Custom/TP_Magic"
                 float  _GrowTime4;
 
                 float  _BlueDelay;
+
+                float  _AnimStartTime;
 
                 float _EmissiveIntensity;
                 float _BlueEmissiveBoost;
@@ -139,7 +144,6 @@ Shader "Custom/TP_Magic"
             float GrowValue(float baseValue, float timeSec, float growTime)
             {
                 if (growTime <= 0.0) return baseValue; //sin animacion growTime = 0
-
                 float t = saturate(timeSec / growTime);
                 return lerp(0.0, baseValue, t);
             }
@@ -149,10 +153,11 @@ Shader "Custom/TP_Magic"
                 // UV (0..1) -> coords centradas (-1..1)
                 float2 p = (IN.uv - 0.5) * 2.0;
 
-                float timeSec = _Time.y;
+                // Tiempo relativo al inicio (si _AnimStartTime = 0, se comporta como antes)
+                float timeSec = max(0.0, _Time.y - _AnimStartTime);
 
                 // --- ROTACION SHADER ---
-                float angleRight = _RotationSpeedRight * _Time.y; //angulo = velocidad * tiempo en segundos
+                float angleRight = _RotationSpeedRight * timeSec; //angulo = velocidad * tiempo en segundos
 
                 float sR = sin(angleRight);
                 float cR = cos(angleRight);
@@ -162,16 +167,14 @@ Shader "Custom/TP_Magic"
                 prRight.x = cR * p.x - sR * p.y;
                 prRight.y = sR * p.x + cR * p.y;
 
-                float angleLeft  = _RotationSpeedLeft  * _Time.y;
+                float angleLeft  = _RotationSpeedLeft  * timeSec;
 
                 float sL = sin(angleLeft);
                 float cL = cos(angleLeft);
 
-
                 float2 prLeft;
                 prLeft.x = cL * p.x - sL * p.y;
                 prLeft.y = sL * p.x + cL * p.y;
-
 
                 float lineMask = 0.0;
 
@@ -183,22 +186,22 @@ Shader "Custom/TP_Magic"
                 lineMask = max(lineMask, CircleLine(prRight, r1, _LineWidth));
 
                 // Nivel 2
-                float sq2Size = GrowValue(_SquareSize2, timeSec, _GrowTime1);
-                float r2  = GrowValue(_Radius2, timeSec, _GrowTime1);
+                float sq2Size = GrowValue(_SquareSize2, timeSec, _GrowTime2);
+                float r2  = GrowValue(_Radius2, timeSec, _GrowTime2);
 
                 lineMask = max(lineMask, SquareLine(prLeft, sq2Size, _LineWidth));
                 lineMask = max(lineMask, CircleLine(prLeft, r2, _LineWidth));
 
                 // Nivel 3
-                float sq3Size = GrowValue(_SquareSize3, timeSec, _GrowTime1);
-                float r3  = GrowValue(_Radius3, timeSec, _GrowTime1);
+                float sq3Size = GrowValue(_SquareSize3, timeSec, _GrowTime3);
+                float r3  = GrowValue(_Radius3, timeSec, _GrowTime3);
 
                 lineMask = max(lineMask, SquareLine(prRight, sq3Size, _LineWidth));
                 lineMask = max(lineMask, CircleLine(prRight, r3, _LineWidth));
 
                 // Nivel 4
-                float sq4Size = GrowValue(_SquareSize4, timeSec, _GrowTime1);
-                float r4 = GrowValue(_Radius4, timeSec, _GrowTime1);
+                float sq4Size = GrowValue(_SquareSize4, timeSec, _GrowTime4);
+                float r4 = GrowValue(_Radius4, timeSec, _GrowTime4);
 
                 lineMask = max(lineMask, SquareLine(prLeft, sq4Size, _LineWidth));
                 lineMask = max(lineMask, CircleLine(prLeft, r4, _LineWidth));
@@ -228,7 +231,6 @@ Shader "Custom/TP_Magic"
 
                 //Emision: sube cuando el hechizo esta en el color final
                 float emissiveIntensity = lerp(_EmissiveIntensity, _EmissiveIntensity * _BlueEmissiveBoost, blueStep);
-
                 float3 emissive = baseColor * emissiveIntensity;
 
                 // --- LUZ DIRECCIONAL (N * L simple) ---
@@ -237,7 +239,7 @@ Shader "Custom/TP_Magic"
                 // Normal fija del portal (plano mirando hacia -Z)
                 float3 N = float3(0, 0, -1);
                 float3 L = normalize(mainLight.direction);
-                
+
                 float3 ndotl = saturate(dot(N, -L));
 
                 //Factor de luz: color de la luz * N*L * intensidad
