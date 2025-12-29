@@ -61,6 +61,6 @@ Material:
     - _Smoothness: 0.8
     m_Colors:
     - _Atmosphere_Color: {r: 0.37414315, g: 0.8912174, b: 0.8343663, a: 1}
-    - _elevationMinMax: {r: -0.3104956, g: 0.27945638, b: 0, a: 0}
+    - _elevationMinMax: {r: -0.31057295, g: 0.28226128, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
