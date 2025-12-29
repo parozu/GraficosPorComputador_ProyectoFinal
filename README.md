@@ -110,7 +110,7 @@ Para realizar este proyecto era necesario crear dos sistemas:
 ---
 
 **Sol**
-Mucísimo más simple que la planeta, el sol consiste en un shader que aplica un ruido voronoi al variable de emisión del material. A este ruido se le aplica un deformación y tiempo para crear movimiento y dos colores que ayudan a resaltar el efecto.
+Muchísimo más simple que la planeta, el sol consiste en un shader que aplica un ruido voronoi al variable de emisión del material. A este ruido se le aplica un deformación y tiempo para crear movimiento y dos colores que ayudan a resaltar el efecto.
 <p align="center">
   <img width="1920" height="1040" alt="image" src="https://github.com/user-attachments/assets/f118bb29-aa25-4db5-b701-fbb042640b03" />
 </p>
