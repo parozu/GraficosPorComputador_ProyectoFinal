@@ -31,6 +31,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 97b0e50c7c47a9b49915cac5764a0e2b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_2cfc042ad3634d2fbee01712abc37ad8_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,15 +52,15 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 2
-    - _BorderMask: -3.1
+    - _BorderMask: 16.39
     - _CastShadows: 1
     - _Cull: 2
-    - _DotsNoise: 32.92
+    - _DotsNoise: 191.36
     - _DotsSize: 0.8
     - _DstBlend: 1
     - _DstBlendAlpha: 1
-    - _MaskPower: 5.23
-    - _NoiseScale: 10
+    - _MaskPower: 3.27
+    - _NoiseScale: -1.9
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -66,7 +70,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _BorderColor: {r: 20.865902, g: 5.0207224, b: 0, a: 1}
+    - _BorderColor: {r: 0.18753564, g: 0.7490196, b: 0.13991114, a: 1}
     - _DotsColor: {r: 0, g: 1.35659, b: 5.590881, a: 1}
     - _DotsTilling: {r: 25, g: 16, b: 0, a: 0}
     - _NoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
