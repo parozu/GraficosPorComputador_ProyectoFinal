@@ -2,7 +2,7 @@
 
 ## 👥 Integrantes (GitHub)
 - **Adrián Alejo Molina** → `SentinelPrime2`
-- **Joan Martín Bernabé** → *(pendiente)*
+- **Joan Martín Bernabé** → `JoanFlorida`
 - **Pablo Rodriguez Zuriaga** → `parozu` / `HiroPRZ`
 - **Timothy Henry de Frias Macwhinnie** → `sinnerbie`
 
@@ -13,8 +13,57 @@
 ### ✨ Adrián Alejo Molina — ¿?
 ---
 
-### ✨ Joan Martín Bernabé — ¿?
+### ✨ Joan Martín Bernabé — Acuarelas
+
+#### 💡 Idea
+
+Se propone intentar simular un efecto visual de acuarela sobre assets 3D, tratando de mantenerme lo más fiel posible a cómo funciona la acuarela en  el mundo real.
+
+#### 🎞️ Inspiraciones / Referencias
+
+La idea original surge del siguiente vídeo de YouTube: https://youtu.be/YMp7VaXuB5A
+Sin embargo, he adaptado mi shader a mis conocimientos y nivel actuales.
+
+Mi objetivo era cumplir con tres características fundamentales de la acuarela: la transparencia de ésta, la distribución de la pintura por capas sustractivas, y el reborde irregular que se forma alrededor de cada "bloque" de pintura. Me hubiera gustado que estos mismos rebordes hubieran surgido entre las distintas capas para simular un efecto de pincelada con abundante agua, pero tras varias pruebas, no he sido capaz de llevarlo a cabo correctamente, por lo que lo he descartado.
+
+#### 🛠️ Proceso de Implementación
+
+- **WatercolorLitURP.shader** → El primer shader que hice. Se añaden dos texturas aleatorias, no queda bien ninguna. Aún no se añade outline.
+
+<p align="center">
+  <img width="1092" height="528" alt="Captura de pantalla 2026-01-09 130516" src="https://github.com/user-attachments/assets/aa81f880-5d71-47f9-a243-4a4f447cb36b" />
+ </p>
+ 
+- **WatercolorOutlineURP.shader** → Shader para hacer un "outline" ajustable a partir de las normales del objeto. Sin embargo, es un contorno demasiado regular.
+
+<p align="center">
+  <img width="1048" height="528" alt="Captura de pantalla 2026-01-09 130607" src="https://github.com/user-attachments/assets/ed31ea60-7308-4f5e-9263-7fb17c90e445" />
+</p>
+
+- **WatercolorSimpleURP.shader** → Segunda prueba de shader. Se parte de un base color en lugar de las texturas, me convence mucho más el resultado. Sin embargo, la escala del ruido hace que se vea sucio. Primer prototipo que cuenta con el outline regular.
+
+<p align="center">
+  <img width="1070" height="555" alt="Captura de pantalla 2026-01-09 130652" src="https://github.com/user-attachments/assets/26973d0c-f56e-4520-820c-fca088be061f" />
+</p>
+
+- **WatercolorArtURP.shader** → Tercer y final shader creado. Se ve mucho más limpio que el anterior, y cumple con casi todos los objetivos (no cuenta con contornos de capas irregulares).
+- **WatercolorOutlineIrregular.shader** → Shader que parte del concepto del contorno anterior, pero con irregularidad ajustable pra que el efecto sea más convincente, y además evoque a un trazo más tradicional.
+
+<p align="center">
+  <img width="1114" height="672" alt="Captura de pantalla 2026-01-09 131005" src="https://github.com/user-attachments/assets/e36bec6c-2c0a-435f-a243-7b35c4bf54fd" />
+</p>
+
+* Todos los shaders de acuarelas cuentan con una textura de Perlin Noise, y una de un escaneado de un folio, para simular la textura del papel.
+
+Cabe destacar que, durante el proceso, se ha intentado realizar lo mismo a través de Shader Graph, pero lo he descartado al no lograr familiarizarme con el software a tiempo para crear algo convincente. También he intentado crear un shader que combinara tanto el efecto de acuarela como el contorno en uno solo, pero no ha dado resultado.
+
+✅ **Pipeline utilizado:** URP (Universal Render Pipeline)
 ---
+#### ✅ Resultado Final
+
+<p align="center">
+  <img width="1494" height="834" alt="Captura de pantalla 2026-01-09 132943" src="https://github.com/user-attachments/assets/b5c30578-d39b-4264-813b-df5d71272b97" />
+</p>
 
 ### ✨ Pablo Rodriguez Zuriaga — Portal Mágico de Teletransporte
 
