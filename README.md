@@ -10,8 +10,68 @@
 
 ## 🧩 Proyectos
 
-### ✨ Adrián Alejo Molina — ¿?
+### ✨ Adrián Alejo Molina — Sci Fi Force Barrier
+# Force Barrier Shader (Unity URP)
+
+## Descripción
+**Force Barrier** es un shader creado en Unity utilizando **Shader Graph** y diseñado para el **Universal Render Pipeline (URP)**. Su objetivo es generar un efecto visual de barrera de energía estilo ciencia ficción, basado en la representación de patrones de puntos animados mediante ruido procedural y control de máscara para definir el contorno de la barrera.
+
+Este shader está pensado para objetos estáticos o dinámicos que requieran un efecto de escudo, campo de fuerza, domo de protección o cualquier tipo de barrera energética con estética futurista.
+
 ---
+
+## Características principales
+- Desarrollado íntegramente con **Shader Graph**.
+- Compatible con **URP**.
+- Efecto visual de red de puntos animados que simulan energía en constante vibración.
+- Control del contorno mediante máscara configurable.
+- Colores personalizables para puntos y borde.
+- Animación basada en ruido con escala y velocidad ajustables.
+- Fácil integración: solo requiere aplicar el material al objeto.
+
+---
+
+## Parámetros configurables
+
+| Parámetro              | Descripción |
+|------------------------|-------------|
+| **Dot Size**           | Controla el tamaño de los puntos que conforman la barrera. |
+| **Dot Color**          | Define el color principal de los puntos energéticos. |
+| **Dot Tiling**         | Ajusta la repetición del patrón de puntos sobre la malla. |
+| **Dot Noise**          | Nivel de distorsión aplicado al patrón. |
+| **Noise Scale**        | Escala general del ruido procedural. |
+| **Noise Speed**        | Velocidad de animación del ruido para simular vibración. |
+| **Mask Power**         | Control sobre qué zonas se muestran o se ocultan mediante máscara. |
+| **Border Color**       | Color del borde de la barrera. |
+| **Border Mask**        | Ajusta intensidad y distribución del borde. |
+
+
+<img width="1993" height="1025" alt="Captura de pantalla 2026-01-12 084651" src="https://github.com/user-attachments/assets/84b64848-1be4-47ca-9f60-9ec163531edf" />
+
+
+
+https://github.com/user-attachments/assets/3bd63ffe-5dbc-49cc-aa72-29f4bc086e12
+
+
+
+---
+
+## Requisitos
+- Unity con **URP** configurado.
+- Shader Graph habilitado en el proyecto.
+- No requiere configuración adicional más allá de aplicar el material.
+
+---
+
+## Uso
+1. Crea un nuevo **Material** en Unity.
+2. Selecciona el shader **Force Barrier** en el menú desplegable.
+3. Aplica el material al objeto en escena.
+4. Ajusta los parámetros según tu necesidad:
+   - Tamaño y color de puntos.
+   - Tiling del patrón.
+   - Noise (intensidad, escala y velocidad).
+   - Máscara y borde.
 
 ### ✨ Joan Martín Bernabé — Acuarelas
 
