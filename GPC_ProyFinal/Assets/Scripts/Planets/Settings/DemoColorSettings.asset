@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fea1139c61e74aad7ee8ca409f749, type: 3}
+  m_Name: DemoColorSettings
+  m_EditorClassIdentifier: Assembly-CSharp::ColorSettings
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.8619018, b: 0.495283, a: 1}
+    key1: {r: 0.3260057, g: 0.6226415, b: 0.41309148, a: 1}
+    key2: {r: 0.25303745, g: 0.46226418, b: 0.22895159, a: 0}
+    key3: {r: 0.4680621, g: 0.6792453, b: 0.44535422, a: 0}
+    key4: {r: 0.5377358, g: 0.34539846, b: 0.21052864, a: 0}
+    key5: {r: 0.5566038, g: 0.51499546, b: 0.48571557, a: 0}
+    key6: {r: 1, g: 1, b: 1, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 3662
+    ctime2: 13107
+    ctime3: 20817
+    ctime4: 29105
+    ctime5: 40092
+    ctime6: 53392
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  planetMaterial: {fileID: 2100000, guid: 83ee3f6516f9ec946b2a50bbafc027c4, type: 2}
+  oceanColor:
+    serializedVersion: 2
+    key0: {r: 0.083704166, g: 0.09677137, b: 0.31132078, a: 1}
+    key1: {r: 0.24003202, g: 0.34149393, b: 0.5471698, a: 1}
+    key2: {r: 0.17065683, g: 0.4143084, b: 0.6132076, a: 0}
+    key3: {r: 0.030704875, g: 0.33261615, b: 0.4339623, a: 0}
+    key4: {r: 0.53844786, g: 0.9433962, b: 0.8829366, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 27949
+    ctime2: 42212
+    ctime3: 56861
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
